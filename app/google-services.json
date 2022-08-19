@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "573881419974",
+    "firebase_url": "https://examen3pmi-default-rtdb.firebaseio.com",
+    "project_id": "examen3pmi",
+    "storage_bucket": "examen3pmi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573881419974:android:7033508c86ba936077efc7",
+        "android_client_info": {
+          "package_name": "com.example.examen_3p_movil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573881419974-5dhn95qdarob288ftn488jnul1emdipp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.examen_3p_movil",
+            "certificate_hash": "6a47c861330ef5766a776c26bec9a71de272c136"
+          }
+        },
+        {
+          "client_id": "573881419974-38rn219t01rgh1rk8k0ioaqbmqnka3kr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkP-gyR6B72_QKQU7hcmF3FrHtkNd8uNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573881419974-38rn219t01rgh1rk8k0ioaqbmqnka3kr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
