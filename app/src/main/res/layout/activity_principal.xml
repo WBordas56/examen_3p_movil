@@ -135,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
                 android:background="#FF9800"
                 android:text="Lista de Medicamentos"
                 android:textSize="18dp" />

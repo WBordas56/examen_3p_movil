@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         init();
 
         imageLogo.setAnimation(animation1);
-        new Handler().postDelayed(this::run, 4000);
+        new Handler().postDelayed(this::run, 3000);
     }
 
     private void init(){
