@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class ActivityPrincipal extends AppCompatActivity {
     ImageView ObjImagen;
     Button btnguardar, btnfoto, btnlista;
+    String Tiempo[] = {"Dia", "Hora"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
