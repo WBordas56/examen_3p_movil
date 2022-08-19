@@ -3,6 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.examen_3p_movil">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
+    <queries>
+
+        <!-- Browser -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data android:scheme="http" />
+        </intent>
+
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +44,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Examen_3p_movil"
         tools:targetApi="31">
+        <activity
+            android:name=".ActivityLista"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityDetalle"
+            android:exported="false" />
         <activity
             android:name=".ActivityPrincipal"
             android:exported="false" />

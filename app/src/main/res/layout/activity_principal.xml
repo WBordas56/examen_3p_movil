@@ -78,7 +78,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:backgroundTint="@color/black"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:textColor="@color/black" />
 
             <TextView
@@ -120,7 +120,7 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/btnSQL"
+                android:id="@+id/btnGuardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
