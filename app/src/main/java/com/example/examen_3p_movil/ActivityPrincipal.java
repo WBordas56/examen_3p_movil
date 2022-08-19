@@ -31,7 +31,7 @@ public class ActivityPrincipal extends AppCompatActivity {
         ObjImagen = (ImageView) findViewById(R.id.ObjImagen);
         spinner = (Spinner) findViewById(R.id.spTiempo);
 
-        ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, tiempo);
+        ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, tiempo);
         spinner.setAdapter(adapter);
     }
 
