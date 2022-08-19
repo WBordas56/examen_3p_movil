@@ -37,8 +37,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="2dp"
-                android:backgroundTint="#31AC36"
+                android:backgroundTint="#E91E63"
                 android:text="Tomar la Fotografia"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -117,7 +118,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:backgroundTint="@color/black"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="number"/>
 
             <Button
                 android:id="@+id/btnGuardar"
@@ -127,6 +128,7 @@
                 android:layout_marginTop="12dp"
                 android:backgroundTint="#2196F3"
                 android:text="Guardar"
+                android:textColor="@color/white"
                 android:textSize="18dp" />
 
             <Button
@@ -134,10 +136,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#FF9800"
                 android:text="Lista de Medicamentos"
+                android:textColor="@color/white"
                 android:textSize="18dp" />
 
         </LinearLayout>

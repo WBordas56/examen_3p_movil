@@ -8,28 +8,42 @@
     android:background="@color/white"
     tools:context=".ActivityLista">
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="12dp"
-        android:text="Listado de Medicamentos"
-        android:textAlignment="center"
-        android:textColor="#03A9F4"
-        android:textSize="20sp" />
-
-    <ListView
-        android:id="@+id/listMedicamentos"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:background="#89c8e9"
-        android:cacheColorHint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="12dp"
+                android:text="Listado de Medicamentos"
+                android:textAlignment="center"
+                android:textColor="#03A9F4"
+                android:textSize="20sp" />
+
+            <ListView
+                android:id="@+id/listMedicamentos"
+                android:layout_width="match_parent"
+                android:layout_height="670dp"
+                android:layout_marginTop="10dp"
+                android:background="#F8F8F8"
+                android:cacheColorHint="@color/black"
+                android:foregroundTint="#E91E63"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.284" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
