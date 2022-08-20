@@ -73,6 +73,14 @@ public class ActivityLista extends AppCompatActivity {
         m.setUid(mediSelected.getUid());
         databaseReference.child("Medicamentos").child(m.getUid()).removeValue();
         Toast.makeText(this, "Medicamento Eliminado", Toast.LENGTH_SHORT).show();
+        LimpiarCajas();
+    }
+
+    private void LimpiarCajas() {
+        Descripcion.setText("");
+        Cantidad.setText("");
+        Tiempo.setText("");
+        Periosidad.setText("");
     }
 
     private void onClickActualizar(View view) {
@@ -84,6 +92,7 @@ public class ActivityLista extends AppCompatActivity {
         m.setPeriocidad(Periosidad.getText().toString().trim());
         databaseReference.child("Medicamentos").child(m.getUid()).setValue(m);
         Toast.makeText(this, "Medicamento Actualizado", Toast.LENGTH_SHORT).show();
+        LimpiarCajas();
     }
 
     private void iniciarFirebase() {

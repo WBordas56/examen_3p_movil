@@ -45,11 +45,15 @@ public class ActivityPrincipal extends AppCompatActivity {
 
         btnguardar.setOnClickListener(this::onClickRegister);
         btnlista.setOnClickListener(this::onClickLista);
+        btnfoto.setOnClickListener(this::onClickFoto);
 
         iniciarFirebase();
 
     }
 
+    private void onClickFoto(View view) {
+        Toast.makeText(this, "¡No Disponible!", Toast.LENGTH_SHORT).show();
+    }
 
 
     private void iniciarFirebase() {
@@ -77,10 +81,16 @@ public class ActivityPrincipal extends AppCompatActivity {
             medicamentos.setPeriocidad(periosid);
             databaseReference.child("Medicamentos").child(medicamentos.getUid()).setValue(medicamentos);
             Toast.makeText(this, "Medicamento Guardado", Toast.LENGTH_SHORT).show();
+            LimpiarCajas();
         }
     }
 
-
+    private void LimpiarCajas() {
+        Descripcion.setText("");
+        Cantidad.setText("");
+        Tiempo.setText("");
+        Periosidad.setText("");
+    }
 
     private void Validar() {
         String desc = Descripcion.getText().toString();
