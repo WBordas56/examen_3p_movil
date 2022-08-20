@@ -1,84 +1,121 @@
 package com.example.examen_3p_movil;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.compose.ui.graphics.ImageBitmap;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.util.Base64;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class ActivityPrincipal extends AppCompatActivity {
-    ImageView ObjImagen;
-    Bitmap foto = null;
-    CollectionReference collectionReference;
+    ImageView Foto;
     Button btnguardar, btnfoto, btnlista;
     TextView Descripcion, Cantidad, Tiempo, Periosidad;
-    Medicamentos medicamentos;
+    Medicamentos medicamentos = new Medicamentos();
+
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+        Init();
 
-        btnguardar = (Button) findViewById(R.id.btnGuardar);
-        btnfoto = (Button) findViewById(R.id.btnFoto);
-        btnlista = (Button) findViewById(R.id.btnLista);
-        ObjImagen = (ImageView) findViewById(R.id.ObjImagen);
-        Tiempo = (TextView) findViewById(R.id.txtTiempo);
-        Descripcion = (TextView) findViewById(R.id.txtDescripcion);
-        Cantidad = (TextView) findViewById(R.id.txtCantidad);
-        Periosidad = (TextView) findViewById(R.id.txtPeriocidad);
+        btnguardar.setOnClickListener(this::onClickRegister);
+        btnlista.setOnClickListener(this::onClickLista);
 
-
-
-        btnguardar.setOnClickListener(this::onClickGuardar);
+        iniciarFirebase();
 
     }
 
-    private void onClickGuardar(View view) {
-        try {
-            CollectionReference collectionReference = FirebaseFirestore.getInstance().collection("medicamentos");
-            DocumentReference documentReference = collectionReference.document();
-            String id = documentReference.getId();
-            medicamentos = new Medicamentos();
-            medicamentos.setKey(id);
-            //medicamentos.setId_medicamentos(giveFiveDigitsNumber());
-            medicamentos.setDescripcion(Descripcion.getText().toString());
-            medicamentos.setCantidad(Cantidad.getText().toString());
-            medicamentos.setTiempo(Tiempo.getText().toString());
-            medicamentos.setPeriocidad(Periosidad.getText().toString());
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-            //foto.compress(Bitmap.CompressFormat.JPEG, 100,outputStream);
-            byte[] byteArray = outputStream.toByteArray();
-            medicamentos.setFoto(Base64.encodeToString(byteArray, Base64.DEFAULT));
-            collectionReference.document(id).set(medicamentos).addOnSuccessListener(unused -> {
-                Toast.makeText(this, "Datos Guardados", Toast.LENGTH_SHORT).show();
-               //LimpiarCampos();
-            });
+    private void iniciarFirebase() {
+        FirebaseApp.initializeApp(this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
+    }
 
-        }catch (Exception ex){
-            Toast.makeText(this, "Error al Guardar", Toast.LENGTH_LONG).show();
+    private void onClickRegister(View view) {
+        String desc = Descripcion.getText().toString();
+        String cant = Cantidad.getText().toString();
+        String tiemp = Tiempo.getText().toString();
+        String periosid = Periosidad.getText().toString();
+
+        if(desc.equals("")||cant.equals("")||tiemp.equals("")||periosid.equals(""))
+        {
+            Validar();
         }
-        
+        else
+        {
+            medicamentos.setUid(UUID.randomUUID().toString());
+            medicamentos.setDescripcion(desc);
+            medicamentos.setCantidad(cant);
+            medicamentos.setTiempo(tiemp);
+            medicamentos.setPeriocidad(periosid);
+            databaseReference.child("Medicamentos").child(medicamentos.getUid()).setValue(medicamentos);
+            Toast.makeText(this, "Medicamento Guardado", Toast.LENGTH_SHORT).show();
+        }
     }
 
+
+
+    private void Validar() {
+        String desc = Descripcion.getText().toString();
+        String cant = Cantidad.getText().toString();
+        String tiemp = Tiempo.getText().toString();
+        String periosid = Periosidad.getText().toString();
+        if (desc.equals(""))
+        {
+            Descripcion.setError("*Obligatorio");
+        }
+        else if (cant.equals(""))
+        {
+            Cantidad.setError("*Obligatorio");
+        }
+        else if (tiemp.equals(""))
+        {
+            Tiempo.setError("*Obligatorio");
+        }
+        else if (periosid.equals(""))
+        {
+            Periosidad.setError("*Obligatorio");
+        }
+
+    }
 
     private void onClickLista(View view) {
         Intent regis = new Intent(getApplicationContext(), ActivityLista.class);
         startActivity(regis);
     }
 
-
+    private void Init() {
+        btnguardar = (Button) findViewById(R.id.btnGuardar);
+        btnfoto = (Button) findViewById(R.id.btnFoto);
+        btnlista = (Button) findViewById(R.id.btnLista);
+        Foto = (ImageView) findViewById(R.id.ObjImagen);
+        Tiempo = (TextView) findViewById(R.id.txtTiempo);
+        Descripcion = (TextView) findViewById(R.id.txtDescripcion);
+        Cantidad = (TextView) findViewById(R.id.txtCantidad);
+        Periosidad = (TextView) findViewById(R.id.txtPeriocidad);
+    }
 }

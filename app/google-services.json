@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "241435946238",
-    "firebase_url": "https://examen-3p-movil-default-rtdb.firebaseio.com",
-    "project_id": "examen-3p-movil",
-    "storage_bucket": "examen-3p-movil.appspot.com"
+    "project_number": "704343822694",
+    "firebase_url": "https://examen-3p-movil1-default-rtdb.firebaseio.com",
+    "project_id": "examen-3p-movil1",
+    "storage_bucket": "examen-3p-movil1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:241435946238:android:a8e0cdfc25fc2d15c5c9af",
+        "mobilesdk_app_id": "1:704343822694:android:1fa85cd286a59db84df8a7",
         "android_client_info": {
           "package_name": "com.example.examen_3p_movil"
         }
       },
       "oauth_client": [
         {
-          "client_id": "241435946238-e5n50btj37seb00tskd8hvoa5i9iegch.apps.googleusercontent.com",
+          "client_id": "704343822694-qlv2aqq8dvsgsa1sevnkaj2ppdpt7ib1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDYUc-gnSRVySpToEp4b785vZmOufN2sCE"
+          "current_key": "AIzaSyAUMVutUB50o0Wt6SfnQONvA1md1ZSNoj8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "241435946238-e5n50btj37seb00tskd8hvoa5i9iegch.apps.googleusercontent.com",
+              "client_id": "704343822694-qlv2aqq8dvsgsa1sevnkaj2ppdpt7ib1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

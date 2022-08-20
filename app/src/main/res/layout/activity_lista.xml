@@ -22,21 +22,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="20dp"
                 android:text="Listado de Medicamentos"
                 android:textAlignment="center"
                 android:textColor="#03A9F4"
                 android:textSize="20sp" />
 
-            <androidx.recyclerview.widget.RecyclerView
+            <ListView
+                android:id="@+id/lv_medicamentos"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/listMedicamentos"
-                android:layout_marginTop="10dp"
-                android:background="#F8F8F8"
-                android:cacheColorHint="@color/black"
-                android:foregroundTint="#E91E63"
-                />
+                android:background="@color/blue1"
+                android:layout_height="670dp"
+                android:layout_marginTop="20dp" />
 
 
         </LinearLayout>

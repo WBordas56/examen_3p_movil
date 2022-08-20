@@ -1,47 +1,37 @@
 package com.example.examen_3p_movil;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 public class Medicamentos implements Serializable {
 
-    private  String key;
-    private String nombre;
+    private String uid;
     private String descripcion;
     private String cantidad;
-    private  String tiempo;
-    private  String Periocidad;
-    private  String url;
+    private String tiempo;
+    private String periocidad;
     private String foto;
 
-    public Medicamentos(String key, String nombre, String descripcion, String cantidad, String tiempo, String periocidad, String foto, String url) {
-        this.key = key;
-        this.nombre = nombre;
+    public Medicamentos(String uid, String descripcion, String cantidad, String tiempo, String periocidad, String foto) {
+        this.uid = uid;
         this.descripcion = descripcion;
         this.cantidad = cantidad;
         this.tiempo = tiempo;
-        this.Periocidad = periocidad;
+        this.periocidad = periocidad;
         this.foto = foto;
-        this.url = url;
     }
 
     Medicamentos(){
 
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getUid() {
+        return uid;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getDescripcion() {
@@ -69,25 +59,23 @@ public class Medicamentos implements Serializable {
     }
 
     public String getPeriocidad() {
-        return Periocidad;
+        return periocidad;
     }
 
     public void setPeriocidad(String periocidad) {
-        this.Periocidad = periocidad;
+        this.periocidad = periocidad;
     }
 
     public String getFoto() {
         return foto;
     }
-     public void setFoto(String foto){
-        this.foto = foto;
-     }
 
-    public String getUrl() {
-        return url;
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    @Override
+    public String toString() {
+        return descripcion;
     }
 }
