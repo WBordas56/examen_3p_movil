@@ -76,6 +76,6 @@ public class Medicamentos implements Serializable {
 
     @Override
     public String toString() {
-        return descripcion;
+        return foto + "  " +descripcion;
     }
 }

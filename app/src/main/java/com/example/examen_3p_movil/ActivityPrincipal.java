@@ -3,6 +3,7 @@ package com.example.examen_3p_movil;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.CalendarContract;
@@ -34,8 +35,8 @@ public class ActivityPrincipal extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         iniciarFirebase();
 
     }
+
+
 
     private void iniciarFirebase() {
         FirebaseApp.initializeApp(this);
