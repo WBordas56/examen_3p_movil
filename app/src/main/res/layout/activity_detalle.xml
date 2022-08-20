@@ -43,7 +43,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
                 android:text="Id: "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -52,6 +54,8 @@
                 android:id="@+id/txtMostId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:enabled="false"
                 android:inputType="text"
                 android:textColor="@color/black" />
@@ -60,7 +64,9 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
                 android:text="Descripción: "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -69,13 +75,17 @@
                 android:id="@+id/txtMostNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:inputType="text"
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
                 android:text="Cantidad: "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -84,13 +94,17 @@
                 android:id="@+id/txtMostDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:inputType="text"
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
                 android:text="Tiempo: "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -99,13 +113,17 @@
                 android:id="@+id/txtMostTiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:inputType="text"
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
                 android:text="Periocidad: "
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -114,6 +132,8 @@
                 android:id="@+id/txtMostPeriocidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:inputType="text"
                 android:textColor="@color/black" />
 
@@ -121,7 +141,9 @@
                 android:id="@+id/btnActualizar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="25dp"
                 android:backgroundTint="#03A9F4"
                 android:text="Actualizar"
                 android:textColor="#FFFFFF"
@@ -131,7 +153,9 @@
                 android:id="@+id/btnEliminar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginEnd="25dp"
                 android:backgroundTint="#F44336"
                 android:text="Eliminar"
                 android:textColor="#FFFFFF"

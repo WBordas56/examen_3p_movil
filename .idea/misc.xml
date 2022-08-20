@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Jimmy/AndroidStudioProjects/examen_3p_movil/app/src/main/res/layout/activity_principal.xml" value="0.25" />
         <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/layout/activity_detalle.xml" value="0.125" />
         <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/layout/activity_lista.xml" value="0.25" />
         <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/layout/activity_main.xml" value="0.22134387351778656" />
         <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/layout/activity_principal.xml" value="0.309375" />
+        <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/layout/iteams.xml" value="0.309375" />
+        <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/layout/item.xml" value="0.30833333333333335" />
         <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1595" />
         <entry key="..\:/Users/Wilmer Bordas/AndroidStudioProjects/examen_3p_movil/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.217" />
       </map>
@@ -18,5 +19,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>
